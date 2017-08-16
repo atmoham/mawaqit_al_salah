@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mawaqit Al-Salah</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/salah_update.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/jquery.datepick.css"> 
+<script type="text/javascript" src="js/jquery.plugin.js"></script> 
+<script type="text/javascript" src="js/jquery.datepick.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-2" style="background-color:white;"></div>
+    <div class="col-md-8" style="background-color:lavenderblush;">
+        <H3 align='center'>Mawaqit Al Salah</H3>
+        <H4 align='center' id="masjid_name">Masjid Name</H4>
+        <H4 align='center' id="masjid_address">Address</H4>
+        <H4 align='center' id="masjid_details">Other Details</H4><br>
+        <table id="salah_table">
+            <tr><td colspan='10' id="username">Username</td><td colspan='2'>From</td><td colspan='3'><input type="text" id="from_date"></input></td></tr>
+            <tr><td colspan='10' id="current_date">Current Date</td><td colspan='2'>To</td><td colspan='3'><input type="text" id="to_date"></input></td></tr>
+            <tr>&nbsp;</tr>
+            <tr>&nbsp;</tr>
+            <tr><td>Arabic</td><td>English</td><td colspan='2'>Fajr</td><td colspan='2'>Zuhar</td><td colspan='2'>Asr</td><td colspan='1'>Maghrib</td><td colspan='2'>Isha</td><td colspan='2'>Juma 1</td><td colspan='2'>Juma 2</td></tr>
+            <tr><td></td><td></td><td>Athaan</td><td>Iqamah</td><td>Athaan</td><td>Iqamah</td><td>Athaan</td><td>Iqamah</td><td>Athaan</td><td>Athaan</td><td>Iqamah</td><td>Athaan</td><td>Iqamah</td><td>Athaan</td><td>Iqamah</td></tr>
+        </table>
+        <br><br>
+        <div>
+        <h4>New User?&nbsp;<button id="signup" class="btn btn-default" value="Signup">Signup</button></h4></div>
+        <div id='message' ></div>
+    </div>
+    <div class="col-md-2" style="background-color:white;"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.angularjs.org/1.3.0-rc.2/angular.js"></script>
+    <script src="https://code.angularjs.org/1.3.0-rc.2/angular-messages.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/signup.js"></script>
+    <script src="js/ngpassword.js"></script>
+    <style type="text/css">
+    ul>li, a{cursor: pointer;}
+    </style>
+    <title>Mawaqit Al-Salah</title>
+</head>
+<body  ng-app="validation">
+    <div class="conatiner">
+        <div class='row'>
+            
+            <div class="col-md-2">
+            </div>
+            
+            
+            <div class="col-md-8" class="container"  ng-controller="RegistrationController as registration"><br><br>
+            <H2> Sign Up</H2>
+            
+            <h3>{{ registration.message }}</h3> 
+            
+            <form name="registrationForm" novalidate ng-submit="registration.submit(registrationForm.$valid)">
+            
+            <div class="form-group">
+            <H3> Name *: <input type="text" id="name" name="name" class="form-control" ng-model="registration.user.name" required />
+            <div ng-messages="registrationForm.name.$error" ng-messages-include="messages.html"></div></H3>
+            </div>
+            
+            <H3><div class="form-group">
+             Username *: <input type="text" id="username" name="username" class="form-control" ng-model="registration.user.username" required />
+            <div ng-messages="registrationForm.username.$error" ng-messages-include="messages.html"></div></div></H3>
+            
+            <H3> <div class="form-group">Password *: <input type="password" name="password" id="pass" class="form-control" ng-model="registration.user.password" required />
+            <div ng-messages="registrationForm.password.$error" ng-messages-include="messages.html"></div></div>
+            </H3>
+            
+            <H3>  
+            <div class="form-group">
+            Confirm Password *:
+            <input type="password" name="confirmPassword" id="cpass" class="form-control" 
+                   ng-model="registration.user.confirmPassword" 
+                   required compare-to="registration.user.password" />
+            <div ng-messages="registrationForm.confirmPassword.$error" ng-messages-include="messages.html"></div>
+            </div>
+            </H3>
+            
+            <H3> <div class="form-group">Contact Number : <input id="phone_no" class="form-control" type="number"></div></H3>
+            
+            
+            <div id="masjid_lookup" ng-controller="ctrl">
+            
+            <H2 id="lookup_text">Masjid Lookup</H2> <H4 id="hidden_text" style="display:none;color:red;">(Please fill up below form.)</H4>
+            
+            <H3 class='new_masjid' style="display:none;"> Masjid Name *: <input id="new_masjid_name" class="form-control" required type="text"></H3>
+            
+            <H3> Country *: <select id="country" class="form-control" ng-model="country" ng-change="changedValue(country)" data-ng-options="countrie as countrie.label for countrie in countries track by countrie.value">
+                <option value="">Select Country</option>
+                </select></H3>
+                                                                                                    
+                <H3 id="state_text"> State : </H3><select id="state" class="form-control" ng-model="state" ng-options="opt.name for opt in options track by opt.name" >
+                <option value="">Select State</option>
+                </select>
+                
+                <H3 id="city_text"> City : </H3><input id="city" class="form-control" type="text">
+                
+                <H3 class='new_masjid' style="display:none;"> Street : <input id="street" class="form-control" type="text"></H3>
+                
+                <h3 id="or">--OR--</h3>
+                
+                <H3 id="zip_text"> Zipcode : </H3><input id="zipcode" class="form-control" type="number">
+                
+                <H3 class='new_masjid' style="display:none;"> Masjid Contact : <input id="masjid_no" class="form-control" required type="number"></H3>
+                <br><br>
+                
+                <button id="search" class='btn btn-default' style="display:block;" value="search">Lookup</button>
+                
+            </div>
+            <br>
+            
+            <H3 id='masjid_name' style="display:none;"> Masjid : <select id="masjid"><option value="0">Please select your Masjid.</option><option value="1">Add Masjid Info if New.</option></select></H3>
+            
+            <div id="new_masjid_info">
+            
+            
+            
+            </div>
+            <br><br>
+            <button id="signup" style="display:none;" class='btn btn-default' value="signup">Signup</button><br>
+            <!--<a href="http://ateefweb.com/index.html" class="btn btn-default">HOME</a>-->
+            <br>
+            <h3><div id='message'></div> </h3>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+</body>
+</html>
