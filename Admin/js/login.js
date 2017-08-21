@@ -7,7 +7,7 @@ function setCookie(cname,cvalue,exdays) {
 
 $(document).ready(function(){
     $('#signup').on('click',function(){
-        window.location.href = "http://ateefweb.com/mawaqit_al_salah/Admin/signup.html";
+        window.location.href = "http://127.0.0.1:8888/Mawaqit_al_salah/Admin/signup.html";
     });
     $('#login').on('click',function(){
         
@@ -17,13 +17,13 @@ $(document).ready(function(){
     $.ajax({
                         type:"post",
                         dataType:"json",
-                        url:"http://ateefweb.com/mawaqit_al_salah/services/login",
+                        url:"http://127.0.0.1:8888/Mawaqit_al_salah/services/login",
                         data:data,
                         success:function(data){
                             //console.log(data);
                             if(data.msg == 'success'){
                                 setCookie('username',username,1);
-                                window.location.href = "http://ateefweb.com/mawaqit_al_salah/Admin/salah_update.html";
+                                window.location.href = "http://127.0.0.1/Mawaqit_al_salah/Admin/salah_update.html";
                             }
                             else{
                                 $('#message').text(data.msg);

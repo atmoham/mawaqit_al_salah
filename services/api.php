@@ -5,10 +5,10 @@
 	
 		public $data = "";
 		
-		const DB_SERVER = "ateefweb.com.mysql";
-		const DB_USER = "ateefweb_com";
-		const DB_PASSWORD = "Atif786";
-		const DB = "ateefweb_com";
+		const DB_SERVER = "127.0.0.1";
+		const DB_USER = "root";
+		const DB_PASSWORD = "admin";
+		const DB = "mawaqit_db";
 
 		private $db = NULL;
 		private $mysqli = NULL;
@@ -36,7 +36,8 @@
 		}
 				
 		private function login(){
-			if($this->get_request_method() != "POST"){
+                        
+                    if($this->get_request_method() != "POST"){
 				$this->response('',406);
 			}
 			$username = $this->_request['username'];		

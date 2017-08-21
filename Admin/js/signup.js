@@ -30,7 +30,7 @@ $(document).ready(function(){
             $.ajax({
                         type:"post",
                         dataType:"json",
-                        url:"http://ateefweb.com/mawaqit_al_salah/services/masjid_lookup",
+                        url:"http://127.0.0.1:8888/Mawaqit_al_salah/services/masjid_lookup",
                         data:data,
                         success:function(data){
                             if(data.msg == 'success'){
@@ -118,7 +118,7 @@ $(document).ready(function(){
     $.ajax({
                         type:"post",
                         dataType:"json",
-                        url:"http://ateefweb.com/mawaqit_al_salah/services/signup",
+                        url:"http://127.0.0.1:8888/Mawaqit_al_salah/services/signup",
                         data:data,
                         success:function(data){
                             //console.log(data);
