@@ -11,15 +11,15 @@
         name:"",
       username: "",
       password: "",
-      confirmPassword: ""
+      confirmPassword: "",
+      phone_no: ''
     };
 
     model.submit = function(isValid) {
-      console.log("h");
       if (isValid) {
         model.message = "Submitted " + model.user.username;
       } else {
-        model.message = "There are still invalid fields below";
+        model.message = "There are still incomplete fields below";
       }
     };
 

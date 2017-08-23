@@ -93,6 +93,7 @@ $(document).ready(function(){
     var cpassword = $('#cpass').val();
     var name = $('#name').val();
     var phone_no = $('#phone_no').val();
+    var email = $('#email').val();
     var masjid_no = $('#masjid_no').val();
     var masjid_name ='';
     street = $('#street').val();
@@ -113,7 +114,7 @@ $(document).ready(function(){
     }
     else{
         
-    var data = {'username' : username, 'pass' : password, 'name' : name, 'phone_no' : phone_no, 'masjid_no' : masjid_no, 'masjid_name' : masjid_name, 'country' : country, 'state' : state, 'city' : city, 'street' : street, 'zipcode' : zipcode};
+    var data = {'username' : username, 'pass' : password, 'name' : name, 'phone_no' : phone_no, 'email' : email, 'masjid_no' : masjid_no, 'masjid_name' : masjid_name, 'country' : country, 'state' : state, 'city' : city, 'street' : street, 'zipcode' : zipcode};
     
     $.ajax({
                         type:"post",

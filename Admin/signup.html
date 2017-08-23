@@ -54,7 +54,10 @@
             </div>
             </H3>
             
-            <H3> <div class="form-group">Contact Number : <input id="phone_no" class="form-control" type="number"></div></H3>
+            <H3> <div class="form-group">Contact Number *: <input id="phone_no" ng-model="registration.user.phone_no" class="form-control" type="number" ng-minlength="10" 
+                   ng-maxlength="10"  required></div></H3>
+            
+            <H3> <div class="form-group">Email : <input id="email" class="form-control" type="text"></div></H3>
             
             
             <div id="masjid_lookup" ng-controller="ctrl">

@@ -23,7 +23,7 @@ $(document).ready(function(){
                             //console.log(data);
                             if(data.msg == 'success'){
                                 setCookie('username',username,1);
-                                window.location.href = "http://127.0.0.1/Mawaqit_al_salah/Admin/salah_update.html";
+                                window.location.href = "http://127.0.0.1:8888/Mawaqit_al_salah/Admin/salah_update.html";
                             }
                             else{
                                 $('#message').text(data.msg);

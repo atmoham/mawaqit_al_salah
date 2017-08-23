@@ -219,6 +219,7 @@
             $password = $_POST['pass'];
             $name = $_POST['name'];
             $phone_no = $_POST['phone_no'];
+            $email = $_POST['email'];
             $masjid_no = $_POST['masjid_no'];
             $masjid_name = $_POST['masjid_name'];
             $country = $_POST['country'];
@@ -240,7 +241,7 @@
 						$this->response($this->json(array('msg' => 'Username Already Taken')), 200);
 					}
 					else{
-           $query = "INSERT INTO masjid_admin (username,password,name,phone_no,masjid_no,masjid_name,masjid_country,masjid_state,masjid_city,masjid_street,masjid_zip) VALUES('$username','$password','$name',$phone_no,$masjid_no,'$masjid_name','$country','$state','$city','$street',$zipcode)";
+           $query = "INSERT INTO masjid_admin (username,password,name,phone_no,email,masjid_no,masjid_name,masjid_country,masjid_state,masjid_city,masjid_street,masjid_zip) VALUES('$username','$password','$name',$phone_no,'$email',$masjid_no,'$masjid_name','$country','$state','$city','$street',$zipcode)";
 			
 				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 				$success = "Account Created Successfully.";//array('status' => "Success", "msg" => "Transaction Created Successfully.", "data" => $req_values);
